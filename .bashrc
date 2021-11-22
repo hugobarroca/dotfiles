@@ -5,7 +5,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1="\[\033[38;5;6m\]\w>\[$(tput sgr0)\]"
 
 alias ls='ls --color=auto'
-alias jack="/home/velo/Software/nand2tetris/tools/JackCompiler.sh"
+alias ll='ls -l'
+alias la='ls -a'
+alias lsa='ls -la'
+
+GREEN="\[$(tput setaf 2)\]"
+RESET="\[$(tput sgr0)\]"
+BOLD="\[$(tput bold)\]"
+
+PS1="${BOLD}${GREEN}\A${RESET}> "
