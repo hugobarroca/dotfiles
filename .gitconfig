@@ -1,0 +1,13 @@
+[user]
+	name = Hugo Barroca
+	email = hugobarroca98@gmail.com
+	username = hugobarroca
+[credential]
+	helper = 
+	helper = C:/Users/HMB/AppData/Local/Programs/Git\\ Credential\\ Manager/git-credential-manager.exe
+[diff]
+    tool = meld
+[difftool]
+    prompt = true
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
