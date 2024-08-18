@@ -8,10 +8,16 @@
 
 alias ls='ls --color=auto'
 alias ll='ls -l'
-alias la='ls -a'
+alias la='ls -la'
 
 GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"
 BOLD="\[$(tput bold)\]"
 
 PS1="${BOLD}${GREEN}\A${RESET}> "
+export PATH=$PATH:~/Apps/Flyway/flyway/
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
