@@ -15,8 +15,8 @@ RESET="\[$(tput sgr0)\]"
 BOLD="\[$(tput bold)\]"
 
 PS1="${BOLD}${GREEN}\A${RESET}> "
-export PATH=$PATH:~/Apps/Flyway/flyway/
 
+export NVCONFIG='/home/scald/.config/nvim'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
