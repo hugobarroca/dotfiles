@@ -1,0 +1,9 @@
+{
+  "tsserver.enable": true,
+  "javascript.format.enable": true,
+  "typescript.format.enable": true,
+  "prettier.enable": true,
+  "prettier.configPath": "",
+  "prettier.requireConfig": false,
+  "editor.formatOnSave": true
+}
