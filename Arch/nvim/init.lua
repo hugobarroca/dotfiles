@@ -18,7 +18,8 @@ require("config.lazy");
 vim.keymap.set('n', '<C-p>', ':Files<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-a>', ':vs<CR><C-w>l', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-s>', ':sp<CR><C-w>j', { noremap = true, silent = true })
-vim.keymap.set('n', '<C-o>', ':Rg!<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-o>', ':RG!<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-e>', ':Explore<CR>', { noremap = true, silent = true })
 
 
 
