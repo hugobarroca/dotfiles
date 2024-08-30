@@ -1,9 +1,32 @@
 {
-  "tsserver.enable": true,
-  "javascript.format.enable": true,
-  "typescript.format.enable": true,
-  "prettier.enable": true,
-  "prettier.configPath": "",
-  "prettier.requireConfig": false,
-  "editor.formatOnSave": true
+  "tsserver": {
+    "enable": true
+  },
+  "javascript": {
+    "format": {
+      "enable": true
+    }
+  },
+  "typescript": {
+    "format": {
+      "enable": true
+    }
+  },
+  "prettier": {
+    "enable": true,
+    "configPath": "",
+    "requireConfig": false
+  },
+  "editor": {
+    "formatOnSave": true
+  },
+  "clangd": {
+    "path": "~/.config/coc/extensions/coc-clangd-data/install/18.1.3/clangd_18.1.3/bin/clangd"
+  },
+  "Lua": {
+    "diagnostics": {
+      "globals": ["vim"]
+    }
+  }
 }
+
