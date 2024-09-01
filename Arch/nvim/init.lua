@@ -9,6 +9,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.title = true
 vim.opt.relativenumber = true
+vim.g.mapleader = " "
 vim.g.netrw_liststyle = 3
 
 -- Add lazy.nvim
@@ -20,10 +21,11 @@ vim.keymap.set('n', '<C-a>', ':vs<CR><C-w>l', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-s>', ':sp<CR><C-w>j', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-o>', ':RG!<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-e>', ':Explore<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>.', '<Plug>(coc-codeaction)', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>R', '<Plug>(coc-rename)', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>f', ':CocCommand editor.action.formatDocument<CR>', { noremap = true, silent = true })
 
 vim.cmd 'syntax on'
 vim.cmd 'colorscheme retrobox'
 -- Source ~/.vimrc
 -- vim.cmd('source ~/.vimrc')
-
-
