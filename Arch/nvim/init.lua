@@ -9,8 +9,16 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.title = true
 vim.opt.relativenumber = true
+vim.opt.tabstop=4
+vim.opt.softtabstop=2
 vim.g.mapleader = " "
 vim.g.netrw_liststyle = 3
+
+-- Define custom signs for breakpoints
+vim.fn.sign_define('DapBreakpoint', {text='🔴', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapBreakpointCondition', {text='🟡', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapLogPoint', {text='💬', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapStopped', {text='➡️', texthl='', linehl='Visual', numhl=''})
 
 -- Add lazy.nvim
 require "config.lazy"
@@ -27,5 +35,4 @@ vim.keymap.set('n', '<Leader>f', ':CocCommand editor.action.formatDocument<CR>',
 
 vim.cmd 'syntax on'
 vim.cmd 'colorscheme retrobox'
--- Source ~/.vimrc
--- vim.cmd('source ~/.vimrc')
+
