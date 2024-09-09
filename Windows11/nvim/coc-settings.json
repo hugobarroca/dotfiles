@@ -1,0 +1,16 @@
+{
+  "svelte.enable-ts-plugin": true,
+  "languageserver": {
+    "csharp-ls": {
+      "command": "csharp-ls",
+      "filetypes": ["cs"],
+      "rootPatterns": [".git", "*.csproj", "omnisharp.json", "global.json"],
+      "initializationOptions": {}
+    },
+    "lua-ls": {
+      "command": "C:\\Users\\HMB\\AppData\\Local\\nvim-data\\mason\\packages\\lua-language-server\\bin\\lua-language-server.exe",
+      "filetypes": ["lua"],
+      "rootPatterns": [".git", ".luarc.json", ".luacheckrc", "main.lua"]
+    }
+  }
+}
