@@ -22,7 +22,7 @@ vim.fn.sign_define('DapStopped', {text='➡️', texthl='', linehl='Visual', num
 
 -- Add lazy.nvim
 require "config.lazy"
-require "lua.remap"
+require "remap"
 
 vim.cmd 'syntax on'
 vim.cmd 'colorscheme retrobox'
