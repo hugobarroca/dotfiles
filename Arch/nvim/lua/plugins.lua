@@ -99,6 +99,7 @@ return {
 			require("dapui").setup()
 		end,
 		dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
-	}
+	},
+	{ "tpope/vim-fugitive" }
 
 }
