@@ -1,4 +1,6 @@
--- Update runtimepath
+-- vim.opt is a table-like object to set nvim options in lua
+-- You could also use vim.o (behaves like vimscript set)
+-- The runtimepath option is the path where nvim will look for configuration files. 
 vim.opt.runtimepath:append(vim.fn.expand('~/.vim'))
 vim.opt.runtimepath:append(vim.fn.expand('~/.vim/after'))
 

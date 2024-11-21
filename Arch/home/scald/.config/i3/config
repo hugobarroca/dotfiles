@@ -12,6 +12,8 @@
 for_window [class="Chrome"] floating enable
 for_window [class="Zenity"] floating enable
 
+exec feh --bg-scale /home/scald/Pictures/backgrounds/GengarWallpaper.jpg
+
 # Startup the composite
 exec --no-startup-id picom
 

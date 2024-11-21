@@ -11,10 +11,6 @@ return {
 			}
 		end
 	},
-	{
-		"neoclide/coc.nvim",
-		branch = "release",
-	},
 	-- [HB] This plugin allows simpler usage of ripgrep within Neovim. :!RG
 	"duane9/nvim-rg",
 	-- [HB] Mason allows you to install LSPs and DAPs more easily. Also linters and the like.
