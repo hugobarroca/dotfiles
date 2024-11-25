@@ -18,6 +18,22 @@ return {
 					debounce_text_changes = 150,
 				},
 			}
+			-- Configure the C# language server (csharp_ls)
+			lspconfig.csharp_ls.setup {
+				on_attach = function(client, bufnr)
+					-- Your on_attach function here (e.g., key mappings)
+					local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+					local opts = { noremap = true, silent = true }
+
+					buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+					buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+					-- Add more key mappings as needed
+				end,
+				flags = {
+					debounce_text_changes = 150,
+				},
+				root_dir = lspconfig.util.root_pattern("*.sln", "*.csproj", ".git"),
+			}
 			-- Configure the CSS language server
 			lspconfig.cssls.setup {
 				on_attach = function(client, bufnr)
@@ -88,6 +104,34 @@ return {
 				},
 			}
 		end
+	},
+	{ 'hrsh7th/cmp-nvim-lsp' },
+	{
+		'hrsh7th/nvim-cmp',
+		config = function()
+			local cmp = require('cmp')
+
+			cmp.setup({
+				snippet = {
+					expand = function(args)
+						-- For vsnip users
+						vim.fn["vsnip#anonymous"](args.body)
+					end,
+				},
+				mapping = {
+					['<C-n>'] = cmp.mapping.select_next_item(),
+					['<C-p>'] = cmp.mapping.select_prev_item(),
+					['<C-Space>'] = cmp.mapping.complete(),
+					['<C-e>'] = cmp.mapping.close(),
+					['<CR>'] = cmp.mapping.confirm({ select = true }),
+				},
+				sources = {
+					{ name = 'nvim_lsp' }, -- LSP source
+					{ name = 'buffer' }, -- Buffer source
+					-- Add other sources as needed
+				},
+			})
+		end,
 	},
 	-- [HB] This plugin allows simpler usage of ripgrep within Neovim. :!RG
 	"duane9/nvim-rg",
