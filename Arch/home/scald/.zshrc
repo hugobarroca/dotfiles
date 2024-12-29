@@ -6,6 +6,7 @@ ZSH_THEME=robbyrussell
 export ZSH="$HOME/.oh-my-zsh"
 # Path to dotnet runtimes and sdks
 export PATH="$PATH:/usr/local/share/dotnet"  # Adjust this path as necessary
+export PATH="$PATH:/home/scald/.dotnet/tools"
 export DOTNET_ROOT=/usr/share/dotnet 
 
 # Set name of the theme to load --- if set to "random", it will
