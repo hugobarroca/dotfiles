@@ -10,6 +10,7 @@ vim.keymap.set('n', '<Leader>.', ':lua vim.lsp.buf.code_action()<CR>', { noremap
 vim.keymap.set('n', '<Leader>f', ':lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>t', ':lua vim.lsp.buf.rename()<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>,', ':lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<F10>', ':lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true })
 
 -- Old COC Settings, shouldn't be needed anymore...
 -- vim.keymap.set('n', '<Leader>.', '<Plug>(coc-codeaction)', { noremap = true, silent = true })
