@@ -7,7 +7,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # Path to dotnet runtimes and sdks
 export PATH="$PATH:/usr/local/share/dotnet"  # Adjust this path as necessary
 export PATH="$PATH:/home/scald/.dotnet/tools"
-export DOTNET_ROOT=/usr/share/dotnet 
+
+export DOTNET_ROOT=/usr/share/dotnet
+export PATH=$PATH:$DOTNET_ROOT
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -112,4 +114,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$HOME/.dotnet:$PATH"
+# export PATH="$HOME/.dotnet:$PATH"
