@@ -62,8 +62,11 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
+
 vim.g.mapleader = " "
 vim.g.netrw_liststyle = 3
+-- This line of black magic witchcraft just sets linenumbers in netrw
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro';
 
 -- Define custom signs for breakpoints
 vim.fn.sign_define('DapBreakpoint', { text = '🔴', texthl = '', linehl = '', numhl = '' })
