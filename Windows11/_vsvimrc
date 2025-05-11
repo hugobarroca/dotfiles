@@ -1,0 +1,4 @@
+let mapleader = " "
+nnoremap <Leader>p :vsc Edit.QuickFindInFiles<CR>
+set relativenumber
+set number
