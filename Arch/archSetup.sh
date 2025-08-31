@@ -14,7 +14,7 @@ create_softlink(){
 }
 
 echo "Installing zsh"
-pacman -S --noconfirm zsh make ly fastfetch gcc
+pacman -S --noconfirm zsh make ly fastfetch gcc less more bat
 
 create_softlink "bashrc" "$home_dir/.bashrc" "$dotfiles_dir/.bashrc"
 source "$home_dir/.bashrc"
