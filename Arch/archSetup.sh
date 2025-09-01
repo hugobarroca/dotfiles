@@ -16,6 +16,7 @@ create_softlink(){
 echo "Installing zsh"
 sudo pacman -S zsh make ly fastfetch gcc more bat less picom rofi
 sudo pacman -S picom rofi
+sudo pacman -S --noconfirm mpv
 
 
 create_softlink "bashrc" "$home_dir/.bashrc" "$dotfiles_dir/.bashrc"
@@ -74,3 +75,14 @@ chsh -s $(which zsh)
 
 sudo systemctl enable NetworkManager
 sudo systemctl enable ly
+
+
+
+### Add emoji and unicode fonts
+sudo pacman -S --noconfirm noto-fonts-emoji
+sudo pacman -S --noconfirm noto-fonts-cjk
+
+# Refresh font cache
+fc-cache -f -v
+
+
