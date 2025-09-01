@@ -14,7 +14,9 @@ create_softlink(){
 }
 
 echo "Installing zsh"
-pacman -S --noconfirm zsh make ly fastfetch gcc less more bat
+sudo pacman -S zsh make ly fastfetch gcc more bat less picom rofi
+sudo pacman -S picom rofi
+
 
 create_softlink "bashrc" "$home_dir/.bashrc" "$dotfiles_dir/.bashrc"
 source "$home_dir/.bashrc"
@@ -29,6 +31,8 @@ mkdir -p /etc/ly
 create_softlink "ly" "/etc/ly/.config.ini" "$dotfiles_dir/etc/ly/.config.ini"
 
 create_softlink "zshrc" "$home_dir/.zshrc" "$dotfiles_dir/home/scald/.zshrc"
+
+create_softlink "xinitrc" "$home_dir/.xinitrc" "$dotfiles_dir/home/scald/.xinitrc"
 
 mkdir -p "$home_dir/.config/kitty"
 create_softlink "kitty.config" "$home_dir/.config/kitty/kitty.conf" "$dotfiles_dir/home/scald/.config/kitty/kitty.conf"
@@ -65,3 +69,8 @@ for file in "$plugins"/*; do
 		ln -s "$file" "$final_plugins"
 	fi
 done
+
+chsh -s $(which zsh)
+
+sudo systemctl enable NetworkManager
+sudo systemctl enable ly

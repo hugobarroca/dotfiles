@@ -20,6 +20,8 @@ exec feh --bg-scale /home/scald/Pictures/backgrounds/Crows.jpg
 
 # Startup the picom window compositer
 exec --no-startup-id picom
+exec --no-startup-id ~/.screenlayout/dual-monitor.sh
+exec --no-startup-id volumeicon
 
 set $mod Mod4
 
