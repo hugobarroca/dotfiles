@@ -76,7 +76,6 @@ return {
 				debounce_text_changes = 150,
 			},
 		}
-		-- Configure the TypeScript language server
 		-- Configure the TypeScript language server (ts_ls)
 		lspconfig.ts_ls.setup {
 			on_attach = function(client, bufnr)
