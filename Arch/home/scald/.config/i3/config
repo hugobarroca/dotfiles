@@ -172,6 +172,7 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+Shift+o exec eval "flameshot gui --raw | tesseract stdin stdout | xclip -sel clip"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
