@@ -1,7 +1,7 @@
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-
+-- Checks if lazy.nvim is already installed, clones it if not
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
 	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
@@ -48,12 +48,12 @@ vim.cmd 'syntax on'
 -- vim.opt is a table-like object to set nvim options in lua
 -- You could also use vim.o (behaves like vimscript set)
 -- The runtimepath option is the path where nvim will look for configuration files.
-vim.opt.runtimepath:append(vim.fn.expand('~/.vim'))
-vim.opt.runtimepath:append(vim.fn.expand('~/.vim/after'))
+vim.opt.rtp:append(vim.fn.expand('~/.vim'))
+vim.opt.rtp:append(vim.fn.expand('~/.vim/after'))
 
 
 -- Set packpath to match runtimepath
-vim.opt.packpath = vim.opt.runtimepath:get()
+vim.opt.packpath = vim.opt.rtp:get()
 vim.opt.autoindent = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -62,9 +62,8 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
-
-vim.g.mapleader = " "
 vim.g.netrw_liststyle = 3
+
 -- This line of black magic witchcraft just sets linenumbers in netrw
 vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro';
 
