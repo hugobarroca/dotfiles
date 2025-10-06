@@ -19,6 +19,7 @@ vim.keymap.set('n', '<Leader>t', ':lua vim.lsp.buf.rename()<CR>', { noremap = tr
 -- Shortcut for opening a new hovering window with error messages.
 vim.keymap.set('n', '<Leader>,', ':lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
 -- Shortcut for going to the implementation of a symbol
+vim.keymap.set('n', '<F2>', ':lua vim.lsp.buf.rename()<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<F10>', ':lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true })
 -- Shortcut for going to the definition of a symbol
 vim.keymap.set('n', '<F11>', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
