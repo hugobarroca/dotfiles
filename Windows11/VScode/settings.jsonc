@@ -1,15 +1,41 @@
 // This file holds my VSCode user settings, to be used at: ~\AppData\Roaming\Code\User\settings.json
 {
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "chat.mcp.gallery.enabled": true,
-    "chat.tools.terminal.autoApprove": {
-        "pytest": true
+  "chat.mcp.gallery.enabled": true,
+  "chat.tools.terminal.autoApprove": {
+    "pytest": true,
+  },
+  "editor.lineNumbers": "relative",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false,
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "vim.leader": "<space>",
+  // This keybinding is for formatting the document in normal mode when pressing <leader> + f
+  // It is non-recursive, meaning it won't trigger other keybindings that start with <leader> + f
+  // Also, remember that this keybinding is specific to normal mode in Vim, so it won't work in insert mode or other modes. If you want to have a similar keybinding for insert mode, you would need to add a separate entry in the "vim.insertModeKeyBindingsNonRecursive" array.
+  // Additionally, if you want to have this keybinding work in all modes (normal, insert, visual), you could add it to the "vim.otherModesKeyBindingsNonRecursive" array as well.
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"],
     },
-    "editor.lineNumbers": "relative",
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": true,
-        "markdown": false,
-        "scminput": false
-    }
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["editor.action.showContextMenu"],
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showCommands"],
+    },
+    {
+      "before": ["<leader>", "o"],
+      "commands": ["workbench.action.quickOpen"],
+    },
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
 }
