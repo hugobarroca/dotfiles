@@ -1,0 +1,15 @@
+// This file holds my VSCode user settings, to be used at: ~\AppData\Roaming\Code\User\settings.json
+{
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "chat.mcp.gallery.enabled": true,
+    "chat.tools.terminal.autoApprove": {
+        "pytest": true
+    },
+    "editor.lineNumbers": "relative",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": false,
+        "scminput": false
+    }
+}
